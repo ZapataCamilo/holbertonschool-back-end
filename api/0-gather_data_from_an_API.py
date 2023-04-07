@@ -9,11 +9,10 @@ if __name__ == '__main__':
     URL = 'https://jsonplaceholder.typicode.com'
 
     user_id = argv[1]
-    rp = \
-        requests.get(
-            f'{URL}/users/{user_id}/todos',
-            params={'_expand': 'user'}
-        )
+    rp = requests.get(
+        f'{URL}/users/{user_id}/todos',
+        params={'_expand': 'user'}
+    )
 
     if rp.status_code == 200:
         data = rp.json()
