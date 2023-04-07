@@ -9,13 +9,13 @@ if __name__ == '__main__':
     URL = 'https://jsonplaceholder.typicode.com'
 
     user_id = argv[1]
-    rp = requests.get(
+    response = requests.get(
         f'{URL}/users/{user_id}/todos',
         params={'_expand': 'user'}
     )
 
-    if rp.status_code == 200:
-        data = rp.json()
+    if response.status_code == 200:
+        data = response.json()
         name = data[0]['user']['name']
         fn_task = [task for task in data if task['completed']]
         len_task = len(fn_task)
@@ -26,4 +26,4 @@ if __name__ == '__main__':
         for task in fn_task:
             print(f'\t{task["title"]}')
     else:
-        print(f'Error: {rp.status_code}')
+        print(f'Error: {response.status_code}')
