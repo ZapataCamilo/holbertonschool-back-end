@@ -26,4 +26,4 @@ if rp.status_code == 200:
     for task in fn_task:
         print(f'\t{task["title"]}')
 else:
-    print('Erro: {}'.format(rp.status_code))
+    print('Error: {}'.format(rp.status_code))
