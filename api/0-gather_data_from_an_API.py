@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 """
-returns information about his/her TODO list progress
+Module documentation
+containig a lot
+of lines
 """
 import requests
 from sys import argv
