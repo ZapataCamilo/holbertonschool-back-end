@@ -22,8 +22,8 @@ if __name__ == '__main__':
         len_data = len(data)
 
         first = f'Employee {name} is done with tasks'
-        print('{}({}/{}):'.format(first, len_task, len_data))
+        print(f'{first}({len_task}/{len_data}):')
         for task in fn_task:
             print(f'\t{task["title"]}')
     else:
-        print('Error: {}'.format(rp.status_code))
+        print(f'Error: {rp.status_code}')
