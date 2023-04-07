@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-'''returns information about his/her TODO list progress.'''
+"""
+returns information about his/her TODO list progress
+"""
 import requests
 from sys import argv
 
@@ -12,7 +14,7 @@ if __name__ == '__main__':
             f'{URL}/users/{id}/todos',
             params={'_expand': 'user'}
         )
-    
+ 
 if rp.status_code == 200:
     data = rp.json()
     data_name = data[0]['user']['name']
