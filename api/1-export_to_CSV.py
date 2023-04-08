@@ -17,7 +17,7 @@ if __name__ == '__main__':
 
     if response.status_code == 200:
         data = response.json()
-        EMPLOYEE_NAME = data[0]['user']['name']
+        EMPLOYEE_NAME = data[0]['user']['username']
         fn_task = [task for task in data if task['completed']]
 
         with open(f'{user_id}.csv', 'w',
