@@ -9,8 +9,7 @@ if __name__ == '__main__':
     URL = 'https://jsonplaceholder.typicode.com'
 
     user_id = argv[1]
-    response = \
-        requests.get(
+    response = requests.get(
         f'{URL}/users/{user_id}/todos',
         params={'_expand': 'user'}
     )
