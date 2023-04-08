@@ -27,4 +27,3 @@ if __name__ == '__main__':
             print(f'\t{task["title"]}')
     else:
         print(f'Error: {response.status_code}')
-
