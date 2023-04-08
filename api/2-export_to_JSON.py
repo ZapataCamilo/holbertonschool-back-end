@@ -20,7 +20,7 @@ if __name__ == '__main__':
         dictionary = {user_id: []}
 
         with open(f'{user_id}.json', 'w',
-                  encoding= 'utf-8') as file:
+                  encoding='utf-8') as file:
             for task in data:
                 actual_dr = {
                         'task': task['title'],
