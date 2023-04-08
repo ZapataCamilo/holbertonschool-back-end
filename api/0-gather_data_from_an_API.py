@@ -6,11 +6,11 @@ import requests
 from sys import argv
 
 if __name__ == '__main__':
-    URL = 'https://jsonplaceholder.typicode.com'
+    site_URL = 'https://jsonplaceholder.typicode.com'
 
     user_id = argv[1]
     response = requests.get(
-        f'{URL}/users/{user_id}/todos',
+        f'{site_URL}/users/{user_id}/todos',
         params={'_expand': 'user'}
     )
 
@@ -27,3 +27,4 @@ if __name__ == '__main__':
             print(f'\t{task["title"]}')
     else:
         print(f'Error: {response.status_code}')
+
