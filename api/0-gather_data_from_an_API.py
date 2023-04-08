@@ -19,10 +19,10 @@ if __name__ == '__main__':
         name = data[0]['user']['name']
         fn_task = [task for task in data if task['completed']]
         len_task = len(fn_task)
-        len_data = len(data)
+        len_task_total = len(data)
 
-        first = f'Employee {name} is done with tasks'
-        print(f'{first}({len_task}/{len_data}):')
+        str_first = f'Employee {name} is done with tasks'
+        print(f'{str_first}({len_task}/{len_task_total}):')
         for task in fn_task:
             print(f'\t{task["title"]}')
     else:
